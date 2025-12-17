@@ -3,7 +3,12 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/components/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/components/card";
 import { Badge } from "@/components/components/badge";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import img from "@/public/images/other/hero section image.jpeg";
@@ -55,7 +60,7 @@ export default function EnchantingSriLankaPage() {
   return (
     <>
       <Navbar />
-
+      <div className="w-full h-16 bg-gray-600"></div>
       <main className="w-full bg-white text-gray-800">
         {/* HERO SECTION */}
         <section className="relative overflow-hidden">
@@ -66,7 +71,8 @@ export default function EnchantingSriLankaPage() {
                 Enchanting Sri Lanka <br /> Enchanting Ceylon
               </h1>
               <p className="text-gray-600 max-w-xl">
-                A perfectly curated journey that blends culture, wildlife, nature, beaches, and heritage across Sri Lanka.
+                A perfectly curated journey that blends culture, wildlife,
+                nature, beaches, and heritage across Sri Lanka.
               </p>
               <div className="flex gap-4">
                 <Button size="lg">Plan My Trip</Button>
@@ -77,7 +83,12 @@ export default function EnchantingSriLankaPage() {
             </div>
 
             <div className="relative w-full h-[420px] rounded-full overflow-hidden">
-              <Image src={img} alt="Sri Lanka Beach" fill className="object-cover" />
+              <Image
+                src={img}
+                alt="Sri Lanka Beach"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
@@ -89,7 +100,9 @@ export default function EnchantingSriLankaPage() {
               <CardContent className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold">Tour Overview</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  This itinerary offers an immersive experience through Sri Lanka’s iconic destinations, rich traditions, scenic landscapes, and unforgettable wildlife encounters.
+                  This itinerary offers an immersive experience through Sri
+                  Lanka’s iconic destinations, rich traditions, scenic
+                  landscapes, and unforgettable wildlife encounters.
                 </p>
               </CardContent>
             </Card>
@@ -116,7 +129,10 @@ export default function EnchantingSriLankaPage() {
 
             <div className="space-y-16">
               {days.map((day) => (
-                <div key={day.day} className="grid md:grid-cols-3 gap-8 items-start">
+                <div
+                  key={day.day}
+                  className="grid md:grid-cols-3 gap-8 items-start"
+                >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">
                       {day.day}
@@ -124,16 +140,25 @@ export default function EnchantingSriLankaPage() {
                     <h3 className="font-semibold text-lg">{day.title}</h3>
                   </div>
 
-                  <p className="md:col-span-1 text-gray-600 leading-relaxed">{day.description}</p>
+                  <p className="md:col-span-1 text-gray-600 leading-relaxed">
+                    {day.description}
+                  </p>
 
                   <div className="grid grid-cols-2 gap-4">
                     {day.images.map((imgItem, i) => (
                       <div
                         key={i}
                         className="relative h-36 rounded-xl overflow-hidden cursor-pointer"
-                        onClick={() => openLightbox(imgItem, day.day, day.title)}
+                        onClick={() =>
+                          openLightbox(imgItem, day.day, day.title)
+                        }
                       >
-                        <Image src={imgItem} alt={`Day ${day.day}`} fill className="object-cover" />
+                        <Image
+                          src={imgItem}
+                          alt={`Day ${day.day}`}
+                          fill
+                          className="object-cover"
+                        />
                       </div>
                     ))}
                   </div>
@@ -147,7 +172,12 @@ export default function EnchantingSriLankaPage() {
         <section className="bg-gray-50 py-20">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
             <div className="relative h-[420px] rounded-2xl overflow-hidden">
-              <Image src={img} alt="Sri Lanka Route Map" fill className="object-cover" />
+              <Image
+                src={img}
+                alt="Sri Lanka Route Map"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <Card>
@@ -174,7 +204,8 @@ export default function EnchantingSriLankaPage() {
                 <CardTitle>Best Time to Visit</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-600">
-                December to April is ideal for west and south coast travel, while May to September suits the east coast.
+                December to April is ideal for west and south coast travel,
+                while May to September suits the east coast.
               </CardContent>
             </Card>
 
@@ -194,7 +225,12 @@ export default function EnchantingSriLankaPage() {
 
         {/* FOOTER IMAGE */}
         <section className="relative h-[360px]">
-          <Image src={img} alt="Sri Lanka Nature" fill className="object-cover" />
+          <Image
+            src={img}
+            alt="Sri Lanka Nature"
+            fill
+            className="object-cover"
+          />
         </section>
       </main>
 
@@ -229,7 +265,12 @@ export default function EnchantingSriLankaPage() {
           </Button>
 
           <div className="relative w-full h-full max-w-7xl max-h-[90vh] flex items-center justify-center">
-            <Image src={selectedImage.src} alt={selectedImage.alt} fill className="object-contain" />
+            <Image
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              fill
+              className="object-contain"
+            />
           </div>
 
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
@@ -266,8 +307,7 @@ const days = [
   {
     day: 4,
     title: "Ella",
-    description:
-      "Scenic train ride through tea plantations and waterfalls.",
+    description: "Scenic train ride through tea plantations and waterfalls.",
     images: [img, img],
   },
 ];

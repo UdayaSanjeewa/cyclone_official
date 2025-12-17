@@ -167,6 +167,10 @@ import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation"; // App Router
 import { Menu, X, Palmtree } from "lucide-react";
 
+/* Images */
+import logoImg from "@/public/LogoImage.png";
+import Image from "next/image";
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -253,15 +257,23 @@ export default function Navbar() {
   const mobileItems = desktopItems;
 
   return (
+    // <nav
+    //   className={`fixed w-full z-50 transition-all duration-500 ${
+    //     scrolled ? "bg-white shadow-lg py-4" : "bg-transparent py-6"
+    //   }`}
+    // >
+
     <nav
-      className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-white shadow-lg py-4" : "bg-transparent py-6"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-white/70 backdrop-blur-xl border-b border-slate-200 shadow-lg py-4"
+          : "bg-white/10 backdrop-blur-lg border-b border-white/20 py-6"
       }`}
     >
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 animate-fade-in">
-            <Palmtree
+            {/* <Palmtree
               className={`w-8 h-8 transition-all duration-300 ${
                 scrolled ? "text-emerald-600" : "text-white"
               }`}
@@ -269,6 +281,37 @@ export default function Navbar() {
             <span
               className={`text-2xl font-light tracking-wide ${
                 scrolled ? "text-gray-900" : "text-white"
+              }`}
+            >
+              Ceylone Retreat
+            </span> */}
+
+            {/* <Palmtree
+              className={`w-8 h-8 transition-all duration-300 ${
+                scrolled ? "text-emerald-600" : "text-white drop-shadow"
+              }`}
+            /> */}
+
+            <div
+              className={`relative transition-all duration-300 ${
+                scrolled ? "opacity-100" : "opacity-90"
+              }`}
+            >
+              <Image
+                src={logoImg}
+                alt="Ceylone Retreat Logo"
+                width={36}
+                height={36}
+                priority
+                className={`transition-all duration-300 ${
+                  scrolled ? "drop-shadow-none" : "drop-shadow-md"
+                }`}
+              />
+            </div>
+
+            <span
+              className={`text-2xl font-light tracking-wide transition-colors ${
+                scrolled ? "text-gray-900" : "text-white drop-shadow"
               }`}
             >
               Ceylone Retreat
@@ -281,8 +324,14 @@ export default function Navbar() {
               <button
                 key={item}
                 onClick={() => handleClick(item)}
-                className={`text-sm font-light tracking-wider hover:text-emerald-500 transition-all duration-300 hover:scale-110 ${
-                  scrolled ? "text-gray-700" : "text-white"
+                // className={`text-sm font-light tracking-wider hover:text-emerald-500 transition-all duration-300 hover:scale-110 ${
+                //   scrolled ? "text-gray-700" : "text-white"
+                // }`}
+
+                className={`text-sm font-light tracking-wider transition-all duration-300 hover:scale-110 ${
+                  scrolled
+                    ? "text-gray-700 hover:text-emerald-600"
+                    : "text-white hover:text-emerald-300"
                 }`}
               >
                 {item.toUpperCase()}
@@ -293,12 +342,21 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="transition-transform duration-300 md:hidden hover:scale-110"
+            className="transition-transform duration-300 hover:scale-110 md:hidden bg-white/80 backdrop-blur-xl shadow-xl border-t border-white/30
+"
           >
             {isMenuOpen ? (
-              <X className={`transition-all duration-300 ${scrolled ? "text-gray-900" : "text-white"}`} />
+              <X
+                className={`transition-all duration-300 ${
+                  scrolled ? "text-gray-900" : "text-white"
+                }`}
+              />
             ) : (
-              <Menu className={`transition-all duration-300 ${scrolled ? "text-gray-900" : "text-white"}`} />
+              <Menu
+                className={`transition-all duration-300 ${
+                  scrolled ? "text-gray-900" : "text-white"
+                }`}
+              />
             )}
           </button>
         </div>

@@ -2,14 +2,28 @@
 
 import Image from "next/image";
 
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+
+const heroImages = [hero1, hero2, hero3];
+
 /* Images */
 import heroSectionImg from "@/public/images/other/hero section image.jpeg";
+import hero1 from "@/public/images/other/hero section image.jpeg";
+import hero2 from "@/public/HouseByTheSeaImages/33.jpg";
+import hero3 from "@/public/HouseByTheSeaImages/29.jpg";
+import hero4 from "@/public/HouseByTheSeaImages/32.jpg";
 import { ImageIcon, Mail, MapPin, Menu, Palmtree, Phone, PhoneCall, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import OwnersSection from "../components/components/OwnersSection";
 import PlannedItineraries from "../components/components/PlannedItineraries";
 import OurTravelJournal from "../components/components/OurTravelJournal";
 import ExpandableContentSection from "../components/components/ExpandableContentSection";
+import HeroCarousel from "@/components/components/HeroCarousal";
 
 export default function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +31,7 @@ export default function Home() {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(
     new Set()
   );
+  const heroImages = [hero1, hero2, hero3, hero4];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -53,7 +68,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen overflow-hidden">
+      {/* <section id="home" className="relative h-screen overflow-hidden">
         <img
           src={heroSectionImg.src}
           alt="Palm paradise"
@@ -76,7 +91,59 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
+
+{/* Hero Section */}
+{/* <section id="home" className="relative h-screen overflow-hidden"> */}
+  {/* Carousel */}
+  {/* <Carousel
+    opts={{ loop: true }}
+    plugins={[
+      Autoplay({
+        delay: 4000,
+        stopOnInteraction: false,
+      }),
+    ]}
+    className="absolute inset-0"
+  >
+    <CarouselContent>
+      {heroImages.map((img, index) => (
+        <CarouselItem key={index} className="relative h-screen">
+          <Image
+            src={img}
+            alt="Ceylone Retreat"
+            fill
+            priority={index === 0}
+            className="object-cover"
+          />
+        </CarouselItem>
+      ))}
+    </CarouselContent>
+  </Carousel> */}
+
+  {/* Overlay */}
+  {/* <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/50 z-10" /> */}
+
+  {/* Content */}
+  {/* <div className="relative z-20 flex items-center justify-center h-full text-center">
+    <div className="max-w-3xl text-white">
+      <h1 className="mb-6 text-5xl font-light md:text-7xl">
+        Your Serene Escape
+      </h1>
+      <p className="mb-10 text-xl">
+        Discover tranquility among palm trees in Hikkaduwa
+      </p>
+      <button
+        onClick={() => scrollToSection("rooms")}
+        className="px-10 py-4 text-sm tracking-widest transition-all duration-300 rounded-sm bg-emerald-600 hover:bg-emerald-700 hover:scale-105"
+      >
+        EXPLORE TOURS
+      </button>
+    </div>
+  </div>
+</section> */}
+      <HeroCarousel scrollToSection={scrollToSection} />
+
 
       {/* About Section */}
       <section id="about" className="py-24 bg-gray-50">

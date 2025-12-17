@@ -50,7 +50,7 @@ const items = [
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <h2 className="text-center text-3xl md:text-4xl font-serif mb-14">
-          Curated Itineraries
+          Planned Itineraries
         </h2>
 
         {/* ShadCN Carousel */}

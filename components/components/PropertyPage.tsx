@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useState } from 'react';
+import Image from "next/image";
+import { useState } from "react";
 import {
   Wifi,
   Utensils,
@@ -17,54 +17,104 @@ import {
   ChevronLeft,
   ChevronRight,
   X,
-} from 'lucide-react';
-import { Card, CardContent } from '@/components/components/card';
-import { Badge } from '@/components/components/badge';
-import { Button } from '@/components/ui/button';
+} from "lucide-react";
+import { Card, CardContent } from "@/components/components/card";
+import { Badge } from "@/components/components/badge";
+import { Button } from "@/components/ui/button";
 
 /* Images */
 import img from "@/public/images/other/hero section image.jpeg";
+import img1 from "@/public/HouseByTheSeaImages/3.jpg";
+import img2 from "@/public/HouseByTheSeaImages/6.jpg";
+import img3 from "@/public/HouseByTheSeaImages/8.jpg";
+import img4 from "@/public/HouseByTheSeaImages/14.jpg";
+import img5 from "@/public/HouseByTheSeaImages/17.jpg";
+import img6 from "@/public/HouseByTheSeaImages/18.jpg";
+import img7 from "@/public/HouseByTheSeaImages/22.jpg";
+import img8 from "@/public/HouseByTheSeaImages/28.jpg";
+import img9 from "@/public/HouseByTheSeaImages/29.jpg";
+import img10 from "@/public/HouseByTheSeaImages/32.jpg";
+import img11 from "@/public/HouseByTheSeaImages/33.jpg";
+import img12 from "@/public/HouseByTheSeaImages/35.jpg";
 
 const facilities = [
-  { icon: Waves, label: 'Beachfront' },
-  { icon: Wifi, label: 'Free WiFi' },
-  { icon: Car, label: 'Airport shuttle' },
-  { icon: Users, label: 'Family rooms' },
-  { icon: Car, label: 'Free parking' },
-  { icon: BanIcon, label: 'Non-smoking rooms' },
-  { icon: Coffee, label: 'Tea/Coffee Maker in All Rooms' },
-  { icon: Wine, label: 'Bar' },
-  { icon: Waves, label: 'Private beach area' },
-  { icon: Utensils, label: 'Breakfast' },
+  { icon: Waves, label: "Beachfront" },
+  { icon: Wifi, label: "Free WiFi" },
+  { icon: Car, label: "Airport shuttle" },
+  { icon: Users, label: "Family rooms" },
+  { icon: Car, label: "Free parking" },
+  { icon: BanIcon, label: "Non-smoking rooms" },
+  { icon: Coffee, label: "Tea/Coffee Maker in All Rooms" },
+  { icon: Wine, label: "Bar" },
+  { icon: Waves, label: "Private beach area" },
+  { icon: Utensils, label: "Breakfast" },
 ];
+
+// const galleryImages = [
+//   {
+//     src: img1,
+//     alt: 'Beachfront property view',
+//   },
+//   {
+//     src: img2,
+//     alt: 'Luxury bedroom with ocean view',
+//   },
+//   {
+//     src: img3,
+//     alt: 'Beachfront terrace',
+//   },
+//   {
+//     src: img4,
+//     alt: 'Swimming pool area',
+//   },
+//   {
+//     src: img5,
+//     alt: 'Spa and wellness facilities',
+//   },
+//   {
+//     src: img6,
+//     alt: 'Restaurant and bar area',
+//   },
+//     {
+//     src: img7,
+//     alt: 'Restaurant and bar area',
+//   },
+//     {
+//     src: img8,
+//     alt: 'Restaurant and bar area',
+//   },
+//     {
+//     src: img9,
+//     alt: 'Restaurant and bar area',
+//   },
+//     {
+//     src: img10,
+//     alt: 'Restaurant and bar area',
+//   },
+//     {
+//     src: img11,
+//     alt: 'Restaurant and bar area',
+//   },
+//     {
+//     src: img12,
+//     alt: 'Restaurant and bar area',
+//   },
+// ];
 
 const galleryImages = [
-  {
-    src: img,
-    alt: 'Beachfront property view',
-  },
-  {
-    src: img,
-    alt: 'Luxury bedroom with ocean view',
-  },
-  {
-    src: img,
-    alt: 'Beachfront terrace',
-  },
-  {
-    src: img,
-    alt: 'Swimming pool area',
-  },
-  {
-    src: img,
-    alt: 'Spa and wellness facilities',
-  },
-  {
-    src: img,
-    alt: 'Restaurant and bar area',
-  },
+  { src: img1, alt: "Beachfront property view" },
+  { src: img2, alt: "Luxury bedroom with ocean view" },
+  { src: img3, alt: "Beachfront terrace" },
+  { src: img4, alt: "Swimming pool area" },
+  { src: img5, alt: "Spa and wellness facilities" },
+  { src: img6, alt: "Restaurant and bar area" },
+  { src: img7, alt: "Restaurant and bar area" },
+  { src: img8, alt: "Restaurant and bar area" },
+  { src: img9, alt: "Restaurant and bar area" },
+  { src: img10, alt: "Restaurant and bar area" },
+  { src: img11, alt: "Restaurant and bar area" },
+  { src: img12, alt: "Restaurant and bar area" },
 ];
-
 
 export default function PropertyPage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -77,26 +127,40 @@ export default function PropertyPage() {
     setSelectedImage(null);
   };
 
-  const navigateImage = (direction: 'prev' | 'next') => {
+  const navigateImage = (direction: "prev" | "next") => {
     if (selectedImage === null) return;
 
-    if (direction === 'prev') {
-      setSelectedImage(selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1);
+    if (direction === "prev") {
+      setSelectedImage(
+        selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1
+      );
     } else {
-      setSelectedImage(selectedImage === galleryImages.length - 1 ? 0 : selectedImage + 1);
+      setSelectedImage(
+        selectedImage === galleryImages.length - 1 ? 0 : selectedImage + 1
+      );
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <div className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
-        <Image
+        {/* <Image
           src={img.src}
           alt="The Sea Hikka Property"
           fill
           className="object-cover"
           priority
+        /> */}
+
+        <Image
+          src={img}
+          alt="The Sea Hikka Property"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
           <div className="max-w-7xl mx-auto">
@@ -131,8 +195,10 @@ export default function PropertyPage() {
                       Beachfront Location
                     </h3>
                     <p className="text-slate-600 leading-relaxed">
-                      House by The Sea Hikka in Hikkaduwa offers a private beach area and direct beachfront access.
-                      Guests enjoy sea views and a sun terrace, complemented by a lush garden and a bar.
+                      House by The Sea Hikka in Hikkaduwa offers a private beach
+                      area and direct beachfront access. Guests enjoy sea views
+                      and a sun terrace, complemented by a lush garden and a
+                      bar.
                     </p>
                   </div>
                 </div>
@@ -150,7 +216,10 @@ export default function PropertyPage() {
                       Comfortable Accommodations
                     </h3>
                     <p className="text-slate-600 leading-relaxed">
-                      Rooms feature air-conditioning, private bathrooms, and modern amenities such as free WiFi, flat-screen TVs, and kitchenettes. Family rooms and interconnected rooms cater to all travelers.
+                      Rooms feature air-conditioning, private bathrooms, and
+                      modern amenities such as free WiFi, flat-screen TVs, and
+                      kitchenettes. Family rooms and interconnected rooms cater
+                      to all travelers.
                     </p>
                   </div>
                 </div>
@@ -168,7 +237,10 @@ export default function PropertyPage() {
                       Wellness and Leisure
                     </h3>
                     <p className="text-slate-600 leading-relaxed">
-                      The guest house provides spa facilities, yoga classes, and a fitness room. Outdoor activities include cycling and scuba diving, while indoor options include a coffee shop and minimarket.
+                      The guest house provides spa facilities, yoga classes, and
+                      a fitness room. Outdoor activities include cycling and
+                      scuba diving, while indoor options include a coffee shop
+                      and minimarket.
                     </p>
                   </div>
                 </div>
@@ -186,7 +258,9 @@ export default function PropertyPage() {
                       Nearby Attractions
                     </h3>
                     <p className="text-slate-600 leading-relaxed">
-                      Seenigama Beach is an 8-minute walk away, while Seenigama Temple lies 0.7 mi from the property. Galle Fort is 14 mi distant, offering cultural exploration.
+                      Seenigama Beach is an 8-minute walk away, while Seenigama
+                      Temple lies 0.7 mi from the property. Galle Fort is 14 mi
+                      distant, offering cultural exploration.
                     </p>
                   </div>
                 </div>
@@ -211,12 +285,23 @@ export default function PropertyPage() {
                 className="relative aspect-[4/3] overflow-hidden rounded-xl cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300"
                 onClick={() => openLightbox(index)}
               >
-                <Image
+                {/* <Image
                   src={image.src}
                   alt={image.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
+                /> */}
+
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 50vw,
+         33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
                     <p className="text-white font-medium drop-shadow-lg">
@@ -272,7 +357,7 @@ export default function PropertyPage() {
             variant="ghost"
             size="icon"
             className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/10 hover:text-white z-10"
-            onClick={() => navigateImage('prev')}
+            onClick={() => navigateImage("prev")}
           >
             <ChevronLeft className="w-8 h-8" />
           </Button>
@@ -281,16 +366,24 @@ export default function PropertyPage() {
             variant="ghost"
             size="icon"
             className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/10 hover:text-white z-10"
-            onClick={() => navigateImage('next')}
+            onClick={() => navigateImage("next")}
           >
             <ChevronRight className="w-8 h-8" />
           </Button>
 
           <div className="relative w-full h-full max-w-7xl max-h-[90vh] flex items-center justify-center">
+            {/* <Image
+              src={galleryImages[selectedImage].src}
+              alt={galleryImages[selectedImage].alt}
+              fill
+              className="object-contain"
+            /> */}
+
             <Image
               src={galleryImages[selectedImage].src}
               alt={galleryImages[selectedImage].alt}
               fill
+              sizes="100vw"
               className="object-contain"
             />
           </div>
