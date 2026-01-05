@@ -70,7 +70,7 @@
 
 // export default OwnersSection
 
-import React from 'react'
+import React from "react";
 
 /* Images */
 import OwnersIMGOne from "@/public/HouseByTheSeaImages/32.jpg";
@@ -92,7 +92,6 @@ function OwnersSection() {
 
       {/* Owners Card */}
       <div className="relative bg-white/80 backdrop-blur-md border border-[#00329522] shadow-2xl rounded-2xl px-4 sm:px-6 md:px-8 py-8 sm:py-10 flex flex-col md:flex-row justify-center gap-6 md:gap-10 hover:shadow-[#00329533] transition-all duration-500 xl:w-[650px] lg:w-[600px] w-[90%] max-w-[700px]">
-        
         {/* Owner 1 */}
         <div className="flex flex-col items-center text-center sm:text-left md:flex-1 hover:scale-[1.02] transition-transform duration-300 gap-3 md:gap-4">
           <img
@@ -102,7 +101,7 @@ function OwnersSection() {
           />
           <div>
             <p className="text-[18px] sm:text-[20px] md:text-[22px] font-semibold text-[#001946]">
-              Mr. John
+              Mr.Upul Gallage
             </p>
             <p className="text-[#555] text-[14px] sm:text-[15px] mt-1">
               Co-Founder & Managing Director
@@ -122,7 +121,7 @@ function OwnersSection() {
           />
           <div>
             <p className="text-[18px] sm:text-[20px] md:text-[22px] font-semibold text-[#001946]">
-              Mr. Doe
+              Mr.Dilshan
             </p>
             <p className="text-[#555] text-[14px] sm:text-[15px] mt-1">
               Co-Founder & Operations Head
@@ -138,7 +137,7 @@ function OwnersSection() {
         className="absolute bottom-0 left-1/2 -translate-x-1/2 opacity-10 w-full max-w-[1000px] object-cover select-none pointer-events-none"
       />
     </section>
-  )
+  );
 }
 
-export default OwnersSection
+export default OwnersSection;

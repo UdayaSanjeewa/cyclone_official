@@ -17,7 +17,16 @@ import hero1 from "@/public/images/other/hero section image.jpeg";
 import hero2 from "@/public/HouseByTheSeaImages/33.jpg";
 import hero3 from "@/public/HouseByTheSeaImages/29.jpg";
 import hero4 from "@/public/HouseByTheSeaImages/32.jpg";
-import { ImageIcon, Mail, MapPin, Menu, Palmtree, Phone, PhoneCall, X } from "lucide-react";
+import {
+  ImageIcon,
+  Mail,
+  MapPin,
+  Menu,
+  Palmtree,
+  Phone,
+  PhoneCall,
+  X,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 import OwnersSection from "../components/components/OwnersSection";
 import PlannedItineraries from "../components/components/PlannedItineraries";
@@ -26,7 +35,7 @@ import ExpandableContentSection from "../components/components/ExpandableContent
 import HeroCarousel from "@/components/components/HeroCarousal";
 
 export default function Home() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(
     new Set()
@@ -62,11 +71,8 @@ export default function Home() {
     setIsMenuOpen(false);
   };
 
-
-
   return (
     <div className="min-h-screen bg-white">
-
       {/* Hero Section */}
       {/* <section id="home" className="relative h-screen overflow-hidden">
         <img
@@ -93,10 +99,10 @@ export default function Home() {
         </div>
       </section> */}
 
-{/* Hero Section */}
-{/* <section id="home" className="relative h-screen overflow-hidden"> */}
-  {/* Carousel */}
-  {/* <Carousel
+      {/* Hero Section */}
+      {/* <section id="home" className="relative h-screen overflow-hidden"> */}
+      {/* Carousel */}
+      {/* <Carousel
     opts={{ loop: true }}
     plugins={[
       Autoplay({
@@ -121,11 +127,11 @@ export default function Home() {
     </CarouselContent>
   </Carousel> */}
 
-  {/* Overlay */}
-  {/* <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/50 z-10" /> */}
+      {/* Overlay */}
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/50 z-10" /> */}
 
-  {/* Content */}
-  {/* <div className="relative z-20 flex items-center justify-center h-full text-center">
+      {/* Content */}
+      {/* <div className="relative z-20 flex items-center justify-center h-full text-center">
     <div className="max-w-3xl text-white">
       <h1 className="mb-6 text-5xl font-light md:text-7xl">
         Your Serene Escape
@@ -144,7 +150,6 @@ export default function Home() {
 </section> */}
       <HeroCarousel scrollToSection={scrollToSection} />
 
-
       {/* About Section */}
       <section id="about" className="py-24 bg-gray-50">
         <div className="max-w-6xl px-4 mx-auto text-center">
@@ -152,8 +157,8 @@ export default function Home() {
             About Ceylone Retreat
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-gray-600">
-            Ceylone Retreat Hikkaduwa offers peaceful accommodation surrounded by
-            nature, blending modern comforts with Sri Lankan coastal charm.
+            Ceylone Retreat Hikkaduwa offers peaceful accommodation surrounded
+            by nature, blending modern comforts with Sri Lankan coastal charm.
           </p>
         </div>
       </section>
@@ -168,7 +173,7 @@ export default function Home() {
       <ExpandableContentSection />
 
       {/* Owners Section */}
-        <OwnersSection />
+      <OwnersSection />
 
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-gray-100">
@@ -181,12 +186,12 @@ export default function Home() {
           </p>
           <div className="space-y-3 text-gray-700">
             <p>
-              <Phone className="inline w-5 h-5 mr-2 text-emerald-600" /> (077)
-              767 0333
+              <Phone className="inline w-5 h-5 mr-2 text-emerald-600" />{" "}
+              071 272 5545
             </p>
             <p>
-              <PhoneCall className="inline w-5 h-5 mr-2 text-emerald-600" />{" "}
-              (065) 205 3680
+              <PhoneCall className="inline w-5 h-5 mr-2 text-emerald-600" /> 076
+              679 2055
             </p>
             <p>
               <Mail className="inline w-5 h-5 mr-2 text-emerald-600" />{" "}
