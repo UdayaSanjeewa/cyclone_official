@@ -9,6 +9,15 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
+import {
+  Phone,
+  PhoneCall,
+  Mail,
+  MapPin,
+} from "lucide-react";
+
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+
 const heroImages = [hero1, hero2, hero3];
 
 /* Images */
@@ -19,12 +28,8 @@ import hero3 from "@/public/HouseByTheSeaImages/29.jpg";
 import hero4 from "@/public/HouseByTheSeaImages/32.jpg";
 import {
   ImageIcon,
-  Mail,
-  MapPin,
   Menu,
   Palmtree,
-  Phone,
-  PhoneCall,
   X,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -175,35 +180,78 @@ export default function Home() {
       {/* Owners Section */}
       <OwnersSection />
 
-      {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gray-100">
-        <div className="max-w-6xl px-4 mx-auto text-center">
-          <h2 className="mb-8 text-4xl font-light text-gray-900 md:text-5xl">
-            Get in Touch
-          </h2>
-          <p className="max-w-3xl mx-auto mb-8 text-lg text-gray-600">
-            Reach out to us for reservations or inquiries.
-          </p>
-          <div className="space-y-3 text-gray-700">
-            <p>
-              <Phone className="inline w-5 h-5 mr-2 text-emerald-600" />{" "}
-              071 272 5545
-            </p>
-            <p>
-              <PhoneCall className="inline w-5 h-5 mr-2 text-emerald-600" /> 076
-              679 2055
-            </p>
-            <p>
-              <Mail className="inline w-5 h-5 mr-2 text-emerald-600" />{" "}
-              info@Cycloneretreat.com
-            </p>
-            <p>
-              <MapPin className="inline w-5 h-5 mr-2 text-emerald-600" />{" "}
-              Hikkaduwa, Sri Lanka
-            </p>
-          </div>
-        </div>
-      </section>
+{/* Contact Section */}
+<section id="contact" className="py-24 bg-gray-100">
+  <div className="max-w-6xl px-4 mx-auto text-center">
+    <h2 className="mb-8 text-4xl font-light text-gray-900 md:text-5xl">
+      Get in Touch
+    </h2>
+
+    <p className="max-w-3xl mx-auto mb-8 text-lg text-gray-600">
+      Reach out to us for reservations or inquiries.
+    </p>
+
+    <div className="space-y-3 text-gray-700">
+      <p>
+        <Phone className="inline w-5 h-5 mr-2 text-emerald-600" />
+        <a
+          href="tel:+94712725545"
+          className="hover:text-emerald-600 transition-colors"
+        >
+          071 272 5545
+        </a>
+      </p>
+
+      <p>
+        <PhoneCall className="inline w-5 h-5 mr-2 text-emerald-600" />
+        <a
+          href="tel:+94766792055"
+          className="hover:text-emerald-600 transition-colors"
+        >
+          076 679 2055
+        </a>
+      </p>
+
+      <p>
+        <Mail className="inline w-5 h-5 mr-2 text-emerald-600" />
+        <a
+          href="mailto:info@cycloneretreat.com"
+          className="hover:text-emerald-600 transition-colors"
+        >
+          info@cycloneretreat.com
+        </a>
+      </p>
+
+      <p>
+        <MapPin className="inline w-5 h-5 mr-2 text-emerald-600" />
+        Hikkaduwa, Sri Lanka
+      </p>
+    </div>
+
+    {/* Social Media */}
+    <div className="flex justify-center mt-10 space-x-5">
+      <a
+        href="https://www.facebook.com/profile.php?id=61581044176328"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        className="flex items-center justify-center w-12 h-12 text-gray-700 transition-all duration-300 bg-white rounded-full shadow-md hover:bg-blue-600 hover:text-white hover:scale-110"
+      >
+        <FaFacebookF size={22} />
+      </a>
+
+      <a
+        href="https://www.instagram.com/housebythesea.hikka/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        className="flex items-center justify-center w-12 h-12 text-gray-700 transition-all duration-300 bg-white rounded-full shadow-md hover:bg-pink-500 hover:text-white hover:scale-110"
+      >
+        <FaInstagram size={22} />
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="py-10 text-center text-white bg-gray-900">
