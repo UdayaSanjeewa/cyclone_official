@@ -106,7 +106,7 @@
 //                 scrolled ? "text-gray-900" : "text-white"
 //               }`}
 //             >
-//               Ceylone Retreat
+//               Cyclone Retreat
 //             </span>
 //           </div>
 
@@ -283,7 +283,7 @@ export default function Navbar() {
                 scrolled ? "text-gray-900" : "text-white"
               }`}
             >
-              Ceylone Retreat
+              Cyclone Retreat
             </span> */}
 
             {/* <Palmtree
@@ -299,7 +299,7 @@ export default function Navbar() {
             >
               <Image
                 src={logoImg}
-                alt="Ceylone Retreat Logo"
+                alt="Cyclone Retreat Logo"
                 width={36}
                 height={36}
                 priority
@@ -314,7 +314,7 @@ export default function Navbar() {
                 scrolled ? "text-gray-900" : "text-white drop-shadow"
               }`}
             >
-              Ceylone Retreat
+              Cyclone Retreat
             </span>
           </div>
 
