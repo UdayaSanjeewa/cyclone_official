@@ -117,7 +117,7 @@ export default function Home() {
         <CarouselItem key={index} className="relative h-screen">
           <Image
             src={img}
-            alt="Ceylone Retreat"
+            alt="Cyclone Retreat"
             fill
             priority={index === 0}
             className="object-cover"
@@ -154,10 +154,10 @@ export default function Home() {
       <section id="about" className="py-24 bg-gray-50">
         <div className="max-w-6xl px-4 mx-auto text-center">
           <h2 className="mb-8 text-4xl font-light text-gray-900 md:text-5xl">
-            About Ceylone Retreat
+            About Cyclone Retreat
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-gray-600">
-            Ceylone Retreat Hikkaduwa offers peaceful accommodation surrounded
+            Cyclone Retreat Hikkaduwa offers peaceful accommodation surrounded
             by nature, blending modern comforts with Sri Lankan coastal charm.
           </p>
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
             </p>
             <p>
               <Mail className="inline w-5 h-5 mr-2 text-emerald-600" />{" "}
-              info@ceyloneretreat.com
+              info@Cycloneretreat.com
             </p>
             <p>
               <MapPin className="inline w-5 h-5 mr-2 text-emerald-600" />{" "}
@@ -208,7 +208,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-10 text-center text-white bg-gray-900">
         <p className="text-sm text-gray-400">
-          © 2025 Ceylone Retreat Hikkaduwa. All rights reserved.
+          © 2025 Cyclone Retreat Hikkaduwa. All rights reserved.
         </p>
       </footer>
     </div>
