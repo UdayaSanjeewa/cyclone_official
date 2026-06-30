@@ -95,16 +95,16 @@ function OwnersSection() {
         {/* Owner 1 */}
         <div className="flex flex-col items-center text-center sm:text-left md:flex-1 hover:scale-[1.02] transition-transform duration-300 gap-3 md:gap-4">
           <img
-            src={OwnersIMGThree.src}
-            alt="Mr. John"
+            src={OwnersIMGTwo.src}
+            alt="Mr. Doe"
             className="w-[90px] h-[90px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full object-cover border-2 border-[#00329522] shadow-md"
           />
           <div>
             <p className="text-[18px] sm:text-[20px] md:text-[22px] font-semibold text-[#001946]">
-              Mr.Upul Gallage
+              Dilshan Dharmaratne
             </p>
             <p className="text-[#555] text-[14px] sm:text-[15px] mt-1">
-              Co-Founder & Managing Director
+              Head Chef/Founder
             </p>
           </div>
         </div>
@@ -115,16 +115,16 @@ function OwnersSection() {
         {/* Owner 2 */}
         <div className="flex flex-col items-center text-center sm:text-left md:flex-1 hover:scale-[1.02] transition-transform duration-300 gap-3 md:gap-4">
           <img
-            src={OwnersIMGTwo.src}
-            alt="Mr. Doe"
+            src={OwnersIMGThree.src}
+            alt="Mr. John"
             className="w-[90px] h-[90px] sm:w-[110px] sm:h-[110px] md:w-[120px] md:h-[120px] rounded-full object-cover border-2 border-[#00329522] shadow-md"
           />
           <div>
             <p className="text-[18px] sm:text-[20px] md:text-[22px] font-semibold text-[#001946]">
-              Mr.Dilshan
+              Upul Gallage
             </p>
             <p className="text-[#555] text-[14px] sm:text-[15px] mt-1">
-              Co-Founder & Operations Head
+              Financial Controller/Operations manager
             </p>
           </div>
         </div>
