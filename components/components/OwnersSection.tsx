@@ -104,7 +104,7 @@ function OwnersSection() {
               Dilshan Dharmaratne
             </p>
             <p className="text-[#555] text-[14px] sm:text-[15px] mt-1">
-              Head Chef/Founder
+              Founder/Head Chef
             </p>
           </div>
         </div>
