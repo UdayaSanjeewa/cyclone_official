@@ -49,7 +49,7 @@ function Gallery() {
           </h2>
           <p className="max-w-2xl mx-auto mb-16 text-lg text-gray-600">
             Explore the scenic views, cozy interiors, and tropical surroundings
-            of Ceylone Retreat Hikkaduwa.
+            of Cyclone Retreat Hikkaduwa.
           </p>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
